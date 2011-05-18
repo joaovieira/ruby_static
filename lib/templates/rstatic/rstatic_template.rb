@@ -29,7 +29,7 @@ class RstaticTemplate < MetricFu::Template
       data = File.open(file, 'r').readlines
       fn = "#{file.gsub(%r{/}, '_')}.html"
 
-      out = "<html><head><style>#{inline_css('css/syntax.css')}</style></head><body>"
+      out = "<html><head></head><body>"
       out << "<table cellpadding='0' cellspacing='0' class='ruby'>"
       data.each_with_index do |line, idx|
         out << "<tr><td valign='top'><small>#{idx + 1}</small></td>"

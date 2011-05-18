@@ -1,4 +1,4 @@
-table { background: #fff; color: #000; }
+table.metrics_table { background: #fff; color: #000; }
 .ruby .normal { color: #000; }
 .ruby .comment { color: #005; font-style: italic; }
 .ruby .keyword { color: #A44; font-weight: bold; }

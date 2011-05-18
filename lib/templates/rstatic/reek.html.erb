@@ -1,16 +1,6 @@
-<h3>Reek Results</h3>
+<h3>Static</h3>
 
-<p><a href="http://reek.rubyforge.org/">Reek</a> detects common code smells in ruby code.</p>
-
-<% graph_name = 'reek' %>
-<% if MetricFu.configuration.graph_engine == :gchart %>
-<img src="<%= graph_name %>.png?<%= Time.now.to_i %>" />
-<% else %>
-<canvas id="graph"></canvas>
-<script language="javascript" src="<%= graph_name %>.js?<%= Time.now.to_i %>" type="text/javascript"></script>
-<% end %>
-
-<table>
+<table class="metrics_table>
   <tr>
     <th>File Path</th>
     <th>Method</th>

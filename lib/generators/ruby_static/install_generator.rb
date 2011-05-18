@@ -61,7 +61,12 @@ module RubyStatic
             copy_file "bluff/bluff-min.js", "public/javascripts/bbluff-min.js"
 	    copy_file "bluff/excanvas.js", "public/javascripts/cexcanvas.js" 
             copy_file "bluff/js-class.js", "public/javascripts/ajs-class.js" 
-          end  
+          end
+
+	  def copy_stylesheets
+	    copy_file "css/default.css", "public/stylesheets/default.css" 
+	    copy_file "css/syntax.css", "public/stylesheets/syntax.css" 
+	  end 
 	  
 	  def end_install
 		puts "#{RubyStatic::Metadata::ANALYSER}: #{RubyStatic::Metadata::PROGRAMMING_LANGUAGE} #{RubyStatic::Metadata::NAME} sucessfully installed!"

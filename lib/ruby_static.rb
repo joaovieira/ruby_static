@@ -5,5 +5,7 @@ module RubyStatic
   
   # Adding a couple of extra files here and you can view all of the source
   # to see what they have in them.
+  require 'templates/rstatic/rstatic_template'
   require 'ruby_static/analyser'
+  require 'extensions/metric_fu/reek_bluff_grapher'
 end
