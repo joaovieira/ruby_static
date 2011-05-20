@@ -7,12 +7,11 @@ class MetricFu::ReekBluffGrapher
         data += "g.data('#{name}', [#{@reek_count[name].join(',')}])\n"
       end
       content = <<-EOS
-        var g = new Bluff.Line('Static', '400x240');
+        var g = new Bluff.Line('Static', '420x252');
         g.theme_pastel();
         g.tooltips = true;
-        g.title_font_size = '16px';
-        g.legend_font_size = '8px';
-        g.marker_font_size = '7px';
+        g.legend_font_size = '7px';
+        g.marker_font_size = '4px';
         g.hide_title = 'true';
         g.title = 'Reek: code smells';
         #{data}

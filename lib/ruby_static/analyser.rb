@@ -6,13 +6,14 @@ module RubyStatic
     def self.run(results_dir, date)
       # Configure metric fu paths
       MetricFu::Configuration.run do |config|
-        config.metrics = [:reek]
-        config.graphs = [:reek]
-        config.template_class = RstaticTemplate
-        config.base_directory = results_dir
-	config.data_directory = File.join(results_dir, '_data')
-	config.output_directory = File.join(results_dir, 'output', "#{date.strftime("%Y%m%d%H%M")}", 'ruby_static')	
-        config.code_dirs = [File.join(results_dir, 'app'), File.join(results_dir, 'lib')]
+	config.base_directory = File.join(results_dir, 'metrics')
+	config.data_directory = File.join(config.base_directory, '_data')
+	config.output_directory = File.join(config.base_directory, 'output', "#{date.strftime("%Y%m%d%H%M")}", 'ruby_static')	
+  	config.template_class = RcomplexityTemplate	
+	config.metrics = [:reek]
+  	config.graphs = [:reek]
+	config.code_dirs = [File.join(results_dir,'app'), File.join(results_dir,'lib')]
+	config.reek = {:dirs_to_reek => config.code_dirs, :config_file_pattern => nil}
       end
 
       # Run metric fu!
