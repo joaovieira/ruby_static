@@ -1,0 +1,5 @@
+# Exemplo de ficheiro para traduções em Portugues, para mais linguas acrescentar outro ficheiro
+# Visite http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale para começar.
+
+pt:
+  static: Estática

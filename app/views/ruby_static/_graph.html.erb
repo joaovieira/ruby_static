@@ -1,0 +1,12 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'bluff/syntax', 'bluff/default' %>
+  <%= javascript_include_tag 'js-class', 'bluff-min', 'excanvas' %>
+<% end %>
+
+<div class="graph_results">
+  <h3><%= t('static') %></h3>
+  <canvas id="<%= RubyStatic::NAME %>"></canvas>
+  <script type="text/javascript">
+    <%= File.read(Dir[File.join(dir, RubyStatic::ANALYSER.underscore, '*.js')].first).html_safe %>
+  </script>
+</div>

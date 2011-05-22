@@ -11,7 +11,7 @@ class RstaticTemplate < MetricFu::Template
       if template_exists?(section)
         create_instance_var(section, contents)
         create_instance_var(:per_file_data, per_file_data)
-	@dir = MetricFu.output_directory 
+	  @dir = MetricFu.output_directory 
         @html = erbify(section)
         html = erbify('layout')
         fn = output_filename(section)

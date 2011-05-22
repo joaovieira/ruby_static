@@ -8,4 +8,8 @@ module RubyStatic
   require 'templates/rstatic/rstatic_template'
   require 'ruby_static/analyser'
   require 'extensions/metric_fu/reek_bluff_grapher'
+  
+  NAME = 'Static'
+  PROGRAMMING_LANGUAGE = "Ruby"
+  ANALYSER = self.name.split('::').first
 end
