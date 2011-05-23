@@ -11,9 +11,7 @@ class RstaticTemplate < MetricFu::Template
       if template_exists?(section)
         create_instance_var(section, contents)
         create_instance_var(:per_file_data, per_file_data)
-	  @dir = MetricFu.output_directory 
-        @html = erbify(section)
-        html = erbify('layout')
+        html = erbify(section)
         fn = output_filename(section)
         MetricFu.report.save_output(html, MetricFu.output_directory, fn)
       end
@@ -29,7 +27,7 @@ class RstaticTemplate < MetricFu::Template
       data = File.open(file, 'r').readlines
       fn = "#{file.gsub(%r{/}, '_')}.html"
 
-      out = "<html><head></head><body>"
+      out = "<html><body>"
       out << "<table cellpadding='0' cellspacing='0' class='ruby'>"
       data.each_with_index do |line, idx|
         out << "<tr><td valign='top'><small>#{idx + 1}</small></td>"
