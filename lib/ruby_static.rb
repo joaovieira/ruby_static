@@ -12,4 +12,5 @@ module RubyStatic
   NAME = 'Static'
   PROGRAMMING_LANGUAGE = "Ruby"
   ANALYSER = self.name.split('::').first
+  OUTPUT_NAME = 'reek'
 end
