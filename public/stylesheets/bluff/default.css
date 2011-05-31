@@ -6,6 +6,7 @@ table.metrics_table {
   margin-bottom: 20px;
   color: #333;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
 }
 
 table.metrics_table tr.light {
@@ -40,6 +41,10 @@ table.metrics_table td {
 
 table.metrics_table td.score {
   text-align: right;
+}
+
+table.metrics_table th.row_header {
+  width: 25%;
 }
 
 .warning {

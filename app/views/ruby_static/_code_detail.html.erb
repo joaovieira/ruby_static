@@ -1,0 +1,6 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'bluff/syntax', 'bluff/default' %>
+  <%= javascript_include_tag 'js-class', 'bluff-min', 'excanvas' %>
+<% end %>
+
+<%= render :file => file %>

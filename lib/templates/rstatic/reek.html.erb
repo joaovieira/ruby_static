@@ -9,7 +9,7 @@
   <% @reek[:matches].each do |match| %>
     <% match[:code_smells].each do |smell| %>
       <tr class='<%= cycle("light", "dark", count) %>'>
-        <td><%= link_to_filename(match[:file_path]) %></td>
+        <td><a href=<%= "#{RubyStatic::NAME.underscore.gsub('_','-')}/#{match[:file_path].gsub(/\//,'_').concat('.html')}" %>><%= match[:file_path] %></a></td>
         <td>
           <%= smell[:method] %>
         </td>

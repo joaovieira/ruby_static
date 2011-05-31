@@ -1,4 +1,10 @@
 table.metrics_table { background: #fff; color: #000; }
+.code_table {overflow: auto;}
+.ruby {background: #fff;}
+.ruby pre {padding: 0px; margin: 0px;}
+.ruby .line_number {color: #000;}
+.ruby .score {color: #000;}
+.ruby .code {background: #eee;}
 .ruby .normal { color: #000; }
 .ruby .comment { color: #005; font-style: italic; }
 .ruby .keyword { color: #A44; font-weight: bold; }
